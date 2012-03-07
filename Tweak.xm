@@ -1,9 +1,11 @@
 #import <UIKit/UIKit.h>
 
 %hook SBWallpaperView
--(void)setAlpha:(float)alpha_ 
+- (float)alpha
 {
-    alpha_ = 0.6f // Choose your value.
-    %orig;
+    return 0.6f;
+ 	
+    //to return to default
+    //return %orig;
 }    
 %end
